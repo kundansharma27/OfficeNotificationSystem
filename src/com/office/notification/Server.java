@@ -1,16 +1,23 @@
 package com.office.notification;
-
-import java.io.IOException;
 import java.net.ServerSocket;
+import java.net.Socket;
 
 public class Server {
-    static void main(String[] args) {
+   public static void main(String[] args) {
         try {
             ServerSocket serverSocket = new ServerSocket(5000);
 
             System.out.println("Server Started...");
-            System.out.println("Waiting for client...");
-        } catch (IOException e) {
+
+            while(true) {
+                Socket client =  serverSocket.accept();
+                System.out.println("New client conected");
+
+                ClientHandler handler = new ClientHandler(client);
+                handler.start();
+            }
+
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
