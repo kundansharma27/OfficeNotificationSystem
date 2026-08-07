@@ -16,6 +16,7 @@ public class Client {
 
     private static ObjectInputStream inputStream;
     private static ObjectOutputStream outputStream;
+    private static boolean heartbeatStarted;
 
     public static void main(String[] args) {
 
@@ -98,6 +99,12 @@ public class Client {
                         String response = (String) packet.getPayload();
 
                         System.out.println(response);
+
+                        HeartbeatSender heartbeatSender = new HeartbeatSender(outputStream);
+                        Thread heartbeatThread =new Thread(heartbeatSender);
+                        heartbeatThread .setDaemon(true);
+                        heartbeatThread.start();
+                        heartbeatStarted = true;
 
                         break;
                 }

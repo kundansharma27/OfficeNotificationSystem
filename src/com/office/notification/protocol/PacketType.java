@@ -4,5 +4,6 @@ public enum PacketType {
 
     REGISTER,
     MESSAGE,
-    ACK
+    ACK,
+    HEARTBEAT
 }

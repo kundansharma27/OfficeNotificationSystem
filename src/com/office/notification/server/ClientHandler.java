@@ -1,7 +1,6 @@
 package com.office.notification.server;
 
 import com.office.notification.model.ClientRegistration;
-import com.office.notification.model.Message;
 import com.office.notification.protocol.Packet;
 import com.office.notification.protocol.PacketType;
 
@@ -9,28 +8,29 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.Socket;
-
-import static com.office.notification.protocol.PacketType.REGISTER;
+import java.time.LocalDateTime;
 
 public class ClientHandler extends Thread {
 
     private final Socket socket;
     private final ClientManager clientManager;
+
     private ObjectOutputStream outputStream;
     private ObjectInputStream inputStream;
+
     private String clientName;
+    private LocalDateTime lastHeartbeat;
 
     public ClientHandler(Socket socket, ClientManager clientManager) {
         this.socket = socket;
         this.clientManager = clientManager;
 
         try {
+
             outputStream = new ObjectOutputStream(socket.getOutputStream());
             outputStream.flush();
 
-            inputStream = new ObjectInputStream(
-                    socket.getInputStream()
-            );
+            inputStream = new ObjectInputStream(socket.getInputStream());
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -51,43 +51,61 @@ public class ClientHandler extends Thread {
 
     @Override
     public void run() {
-        Packet packet;
 
         try {
-             packet = (Packet) inputStream.readObject();
-        } catch (IOException| ClassNotFoundException e) {
-            e.printStackTrace();
-            return;
-        }
 
-        switch (packet.getType()) {
-            case REGISTER:
+            // Registration Packet
+            Packet packet = (Packet) inputStream.readObject();
 
-            ClientRegistration registration =
-                    (ClientRegistration) packet.getPayload();
+            if (packet.getType() == PacketType.REGISTER) {
 
-            clientName = registration.getComputerName();
+                ClientRegistration registration =
+                        (ClientRegistration) packet.getPayload();
 
-            clientManager.addClient(this);
+                clientName = registration.getComputerName();
 
-            System.out.println("Client Registered : " + clientName);
+                lastHeartbeat = LocalDateTime.now();
 
+                clientManager.addClient(this);
 
-            Packet ackPacket = new Packet(PacketType.ACK, "Registration Successful");
-            sendPacket(ackPacket);
+                System.out.println("Client Registered : " + clientName);
 
-            break;
+                Packet ackPacket = new Packet(
+                        PacketType.ACK,
+                        "Registration Successful"
+                );
 
-            default:
-                System.out.println("Unknown Packet");
-        }
-
-        try {
-            while (!socket.isClosed()) {
-                Thread.sleep(1000);
+                sendPacket(ackPacket);
             }
-        } catch (InterruptedException e) {
-            Thread.currentThread().interrupt();
+
+            // Future packets
+            while (!socket.isClosed()) {
+
+                Packet incomingPacket =
+                        (Packet) inputStream.readObject();
+
+                switch (incomingPacket.getType()) {
+
+                    case HEARTBEAT:
+
+                        lastHeartbeat = LocalDateTime.now();
+
+                        System.out.println(
+                                "Heartbeat Received : "
+                                        + clientName
+                        );
+
+                        break;
+
+                    default:
+                        break;
+                }
+            }
+
+        } catch (IOException | ClassNotFoundException e) {
+
+            System.out.println(clientName + " disconnected.");
+
         } finally {
 
             clientManager.removeClient(this);
@@ -98,10 +116,15 @@ public class ClientHandler extends Thread {
                 e.printStackTrace();
             }
 
-            System.out.println("Client Disconnected");
-            System.out.println("Remaining Clients : "
-                    + clientManager.getClientCount());
+            System.out.println(
+                    "Remaining Clients : "
+                            + clientManager.getClientCount()
+            );
         }
+    }
+
+    public LocalDateTime getLastHeartbeat() {
+        return lastHeartbeat;
     }
 
     public String getClientName() {
