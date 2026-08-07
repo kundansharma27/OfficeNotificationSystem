@@ -19,6 +19,14 @@ public class Server {
           AdminDashboard dashboard =  new AdminDashboard(notificationService, clientManager);
           clientManager.setClientListListener(dashboard);
 
+            HeartbeatMonitor heartbeatMonitor = new HeartbeatMonitor(clientManager);
+
+            Thread heartbeatThread = new Thread(heartbeatMonitor);
+
+            heartbeatThread.setDaemon(true);
+
+            heartbeatThread.start();
+
             while (true) {
 
                 Socket socket = serverSocket.accept();

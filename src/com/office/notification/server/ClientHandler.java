@@ -130,6 +130,9 @@ public class ClientHandler extends Thread {
     public String getClientName() {
         return clientName;
     }
+    public boolean isAliveClient() {
+        return lastHeartbeat != null && lastHeartbeat.isAfter(LocalDateTime.now().minusSeconds(60));
+    }
 
     @Override
     public String toString() {
