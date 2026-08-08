@@ -3,6 +3,8 @@ package com.office.notification.server;
 import com.office.notification.model.ClientRegistration;
 import com.office.notification.protocol.Packet;
 import com.office.notification.protocol.PacketType;
+import com.office.notification.util.LoggerUtil;
+import org.slf4j.Logger;
 
 import java.io.IOException;
 import java.io.ObjectInputStream;
@@ -21,6 +23,8 @@ public class ClientHandler extends Thread {
     private String clientName;
     private LocalDateTime lastHeartbeat;
 
+    private static final Logger logger = LoggerUtil.getLogger(ClientHandler.class);
+
     public ClientHandler(Socket socket, ClientManager clientManager) {
         this.socket = socket;
         this.clientManager = clientManager;
@@ -28,12 +32,14 @@ public class ClientHandler extends Thread {
         try {
 
             outputStream = new ObjectOutputStream(socket.getOutputStream());
+
             outputStream.flush();
 
             inputStream = new ObjectInputStream(socket.getInputStream());
 
         } catch (IOException e) {
-            e.printStackTrace();
+
+            logger.error("Failed to initialize client connection", e);
         }
     }
 
@@ -45,7 +51,12 @@ public class ClientHandler extends Thread {
             outputStream.flush();
 
         } catch (IOException e) {
-            e.printStackTrace();
+
+            logger.error(
+                    "Failed to send packet to client: {}",
+                    clientName,
+                    e
+            );
         }
     }
 
@@ -59,8 +70,7 @@ public class ClientHandler extends Thread {
 
             if (packet.getType() == PacketType.REGISTER) {
 
-                ClientRegistration registration =
-                        (ClientRegistration) packet.getPayload();
+                ClientRegistration registration = (ClientRegistration) packet.getPayload();
 
                 clientName = registration.getComputerName();
 
@@ -68,21 +78,17 @@ public class ClientHandler extends Thread {
 
                 clientManager.addClient(this);
 
-                System.out.println("Client Registered : " + clientName);
+                logger.info("Client registered: {}", clientName);
 
-                Packet ackPacket = new Packet(
-                        PacketType.ACK,
-                        "Registration Successful"
-                );
+                Packet ackPacket = new Packet(PacketType.ACK, "Registration Successful");
 
                 sendPacket(ackPacket);
             }
 
-            // Future packets
+            // Receive future packets
             while (!socket.isClosed()) {
 
-                Packet incomingPacket =
-                        (Packet) inputStream.readObject();
+                Packet incomingPacket = (Packet) inputStream.readObject();
 
                 switch (incomingPacket.getType()) {
 
@@ -90,36 +96,42 @@ public class ClientHandler extends Thread {
 
                         lastHeartbeat = LocalDateTime.now();
 
-                        System.out.println(
-                                "Heartbeat Received : "
-                                        + clientName
-                        );
+                        logger.debug("Heartbeat received: {}", clientName);
 
                         break;
 
                     default:
+
+                        logger.warn(
+                                "Unknown packet received from client: {}",
+                                clientName
+                        );
+
                         break;
                 }
             }
 
         } catch (IOException | ClassNotFoundException e) {
 
-            System.out.println(clientName + " disconnected.");
+            logger.info(
+                    "Client disconnected: {}",
+                    clientName
+            );
 
         } finally {
 
             clientManager.removeClient(this);
 
             try {
+
                 socket.close();
+
             } catch (IOException e) {
-                e.printStackTrace();
+
+                logger.error("Error while closing socket for client: {}", clientName, e);
             }
 
-            System.out.println(
-                    "Remaining Clients : "
-                            + clientManager.getClientCount()
-            );
+            logger.info("Remaining clients: {}", clientManager.getClientCount());
         }
     }
 
@@ -130,8 +142,13 @@ public class ClientHandler extends Thread {
     public String getClientName() {
         return clientName;
     }
+
     public boolean isAliveClient() {
-        return lastHeartbeat != null && lastHeartbeat.isAfter(LocalDateTime.now().minusSeconds(60));
+
+        return lastHeartbeat != null
+                && lastHeartbeat.isAfter(
+                LocalDateTime.now().minusSeconds(60)
+        );
     }
 
     @Override

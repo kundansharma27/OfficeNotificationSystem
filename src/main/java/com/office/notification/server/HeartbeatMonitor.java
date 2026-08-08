@@ -13,13 +13,8 @@ public class HeartbeatMonitor implements Runnable {
         System.out.println("Heartbeat Monitor Started");
 
         while (true) {
-            System.out.println("Checking clients...");
+
             for (ClientHandler client : clientManager.getClients()) {
-                System.out.println(
-                        client.getClientName()
-                                + " Alive : "
-                                + client.isAliveClient()
-                );
 
                 if (!client.isAliveClient()) {
 
