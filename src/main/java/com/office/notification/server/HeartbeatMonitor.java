@@ -28,9 +28,11 @@ public class HeartbeatMonitor implements Runnable {
                     if (!client.isAliveClient()) {
 
                         logger.warn(
-                                "Client appears inactive: {}",
+                                "Client heartbeat timeout: {}",
                                 client.getClientName()
                         );
+
+                        client.disconnect();
                     }
                 }
 

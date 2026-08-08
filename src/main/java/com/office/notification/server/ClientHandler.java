@@ -150,6 +150,18 @@ public class ClientHandler extends Thread {
                 LocalDateTime.now().minusSeconds(60)
         );
     }
+    public void disconnect() {
+
+        try {
+            socket.close();
+
+            logger.info("Inactive client disconnected: {}", clientName);
+
+        } catch (IOException e) {
+
+            logger.error("Failed to disconnect client: {}", clientName, e);
+        }
+    }
 
     @Override
     public String toString() {
