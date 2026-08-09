@@ -19,6 +19,7 @@ public class Client {
     private static ObjectOutputStream outputStream;
 
     private static boolean heartbeatStarted;
+    private static HeartbeatSender heartbeatSender;
 
     private static final Logger logger =
             LoggerUtil.getLogger(Client.class);
@@ -158,18 +159,14 @@ public class Client {
 
                             heartbeatStarted = true;
 
-                            logger.info(
-                                    "Heartbeat sender started"
-                            );
+                            logger.info("Heartbeat sender started");
                         }
 
                         break;
 
                     default:
 
-                        logger.warn(
-                                "Unknown packet received from server"
-                        );
+                        logger.warn("Unknown packet received from server");
 
                         break;
                 }
