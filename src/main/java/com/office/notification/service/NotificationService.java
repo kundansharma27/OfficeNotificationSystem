@@ -1,5 +1,5 @@
 package com.office.notification.service;
-
+import com.office.notification.repository.NotificationRepository;
 import com.office.notification.model.Message;
 import com.office.notification.protocol.Packet;
 import com.office.notification.protocol.PacketType;
@@ -8,15 +8,18 @@ import com.office.notification.server.ClientManager;
 import com.office.notification.util.LoggerUtil;
 import org.slf4j.Logger;
 
+
 public class NotificationService {
 
     private final ClientManager clientManager;
+    private final NotificationRepository notificationRepository;
 
-    private static final Logger logger =
-            LoggerUtil.getLogger(NotificationService.class);
+    private static final Logger logger = LoggerUtil.getLogger(NotificationService.class);
 
     public NotificationService(ClientManager clientManager) {
         this.clientManager = clientManager;
+        this.notificationRepository = new NotificationRepository();
+
     }
 
     public void sendNotification(Message message) {
@@ -24,9 +27,10 @@ public class NotificationService {
         Packet packet = new Packet(PacketType.MESSAGE, message);
 
         for (ClientHandler client : clientManager.getClients()) {
-
             client.sendPacket(packet);
         }
+
+        notificationRepository.saveNotification(message,"ALL");
 
         logger.info("Notification sent to all clients. Priority: {}", message.getPriority());
     }
@@ -38,6 +42,7 @@ public class NotificationService {
             Packet packet = new Packet(PacketType.MESSAGE, message);
 
             client.sendPacket(packet);
+            notificationRepository.saveNotification(message, client.getClientName());
 
             logger.info("Notification sent to client: {}. Priority: {}", client.getClientName(), message.getPriority());
         }

@@ -1,12 +1,13 @@
-/*package com.office.notification.client;
+package com.office.notification.client;
 
 import com.office.notification.protocol.Packet;
 import com.office.notification.protocol.PacketType;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.ObjectOutputStream;
-import java.io.OutputStream;
-
-import static java.io.OutputStream.*;
 
 public class HeartbeatSender implements Runnable {
     private final ObjectOutputStream outputStream;
@@ -14,6 +15,8 @@ public class HeartbeatSender implements Runnable {
     public HeartbeatSender(ObjectOutputStream outputStream) {
         this.outputStream = outputStream;
     }
+    private static final Logger logger =
+            LoggerFactory.getLogger(HeartbeatSender.class);
 
     @Override
     public void run() {
@@ -27,73 +30,14 @@ public class HeartbeatSender implements Runnable {
                 outputStream.writeObject(heartbeatPacket);
                 outputStream.flush();
 
-                System.out.println("Heartbeat Sent");
-
             } catch (InterruptedException e) {
                 Thread.currentThread().interrupt();
                 break;
             } catch (Exception e) {
-
-                e.printStackTrace();
+                logger.warn("Heartbeat sender stopped because connection was closed.");
                 break;
 
             }
         }
-    }
-}*/
-package com.office.notification.client;
-
-import com.office.notification.protocol.Packet;
-import com.office.notification.protocol.PacketType;
-
-import java.io.ObjectOutputStream;
-
-public class HeartbeatSender implements Runnable {
-
-    private final ObjectOutputStream outputStream;
-
-    private volatile boolean running = true;
-
-    public HeartbeatSender(ObjectOutputStream outputStream) {
-        this.outputStream = outputStream;
-    }
-
-    @Override
-    public void run() {
-
-        while (running) {
-
-            try {
-
-                Thread.sleep(3000);
-
-                Packet heartbeatPacket =
-                        new Packet(
-                                PacketType.HEARTBEAT,
-                                null
-                        );
-
-                outputStream.writeObject(heartbeatPacket);
-                outputStream.flush();
-
-                System.out.println("Heartbeat Sent");
-
-            } catch (InterruptedException e) {
-
-                Thread.currentThread().interrupt();
-                break;
-
-            } catch (Exception e) {
-
-                e.printStackTrace();
-                break;
-            }
-        }
-    }
-
-    public void stop() {
-
-        running = false;
     }
 }
-

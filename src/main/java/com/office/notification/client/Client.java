@@ -17,12 +17,13 @@ public class Client {
 
     private static ObjectInputStream inputStream;
     private static ObjectOutputStream outputStream;
+    private static Socket socket;
 
     private static boolean heartbeatStarted;
     private static HeartbeatSender heartbeatSender;
+    private static Thread heartbeatThread;
 
-    private static final Logger logger =
-            LoggerUtil.getLogger(Client.class);
+    private static final Logger logger = LoggerUtil.getLogger(Client.class);
 
     public static void main(String[] args) {
 
@@ -53,8 +54,6 @@ public class Client {
     }
 
     private static void connectToServer() throws Exception {
-
-        Socket socket = null;
 
         try {
 
@@ -137,21 +136,15 @@ public class Client {
 
                     case ACK:
 
-                        String response =
-                                (String) packet.getPayload();
+                        String response = (String) packet.getPayload();
 
-                        logger.info(
-                                "Server registration response: {}",
-                                response
-                        );
+                        logger.info("Server registration response: {}", response);
 
                         if (!heartbeatStarted) {
 
-                            HeartbeatSender heartbeatSender =
-                                    new HeartbeatSender(outputStream);
+                            HeartbeatSender heartbeatSender = new HeartbeatSender(outputStream);
 
-                            Thread heartbeatThread =
-                                    new Thread(heartbeatSender);
+                            heartbeatThread = new Thread(heartbeatSender);
 
                             heartbeatThread.setDaemon(true);
 
@@ -174,26 +167,47 @@ public class Client {
 
         } finally {
 
+            heartbeatStarted = false;
+
+            if (heartbeatThread != null) {
+                heartbeatThread.interrupt();
+                heartbeatThread = null;
+            }
+
+            heartbeatSender = null;
+
             if (inputStream != null) {
 
-                inputStream.close();
+                try {
+                    inputStream.close();
+                } catch (Exception e) {
+                    logger.debug("Error closing input stream", e);
+                }
+
                 inputStream = null;
             }
 
             if (outputStream != null) {
 
-                outputStream.close();
+                try {
+                    outputStream.close();
+                } catch (Exception e) {
+                    logger.debug("Error closing output stream", e);
+                }
+
                 outputStream = null;
             }
 
             if (socket != null && !socket.isClosed()) {
 
-                socket.close();
+                try {
+                    socket.close();
+                } catch (Exception e) {
+                    logger.debug("Error closing socket", e);
+                }
             }
 
-            heartbeatStarted = false;
-
-
+            socket = null;
         }
     }
 }
