@@ -1,0 +1,151 @@
+2026-08-09 09:37:28 INFO  [main] c.office.notification.server.Server - Server Started...
+2026-08-09 09:37:28 INFO  [Thread-0] c.o.n.server.HeartbeatMonitor - Heartbeat monitor started
+2026-08-09 09:37:29 INFO  [main] c.office.notification.client.Client - Connected to server
+2026-08-09 09:37:29 INFO  [main] c.office.notification.server.Server - New client connection accepted from /127.0.0.1
+2026-08-09 09:37:29 INFO  [main] c.office.notification.server.Server - Total Clients: 0
+2026-08-09 09:37:29 INFO  [Thread-1] c.o.n.server.ClientHandler - Client registered: ASUS
+2026-08-09 09:37:29 INFO  [main] c.office.notification.client.Client - Server registration response: Registration Successful
+2026-08-09 09:37:29 INFO  [main] c.office.notification.client.Client - Heartbeat sender started
+2026-08-09 09:37:35 INFO  [AWT-EventQueue-0] c.o.n.service.NotificationService - Notification sent to all clients. Priority: Information
+2026-08-09 09:37:39 WARN  [Thread-1] c.office.notification.client.Client - TEST: Heartbeat sender stopped
+2026-08-09 09:37:39 INFO  [main] c.office.notification.client.Client - Notification received with priority: Information
+2026-08-09 09:38:48 WARN  [Thread-0] c.o.n.server.HeartbeatMonitor - Client heartbeat timeout: ASUS
+2026-08-09 09:38:48 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-09 09:38:48 INFO  [Thread-1] c.o.n.server.ClientHandler - Client disconnected: ASUS
+2026-08-09 09:38:48 INFO  [Thread-1] c.o.n.server.ClientHandler - Remaining clients: 0
+2026-08-09 09:38:48 INFO  [Thread-0] c.o.n.server.ClientHandler - Inactive client disconnected: ASUS
+2026-08-09 09:38:53 INFO  [main] c.office.notification.client.Client - Connected to server
+2026-08-09 09:38:53 INFO  [main] c.office.notification.server.Server - New client connection accepted from /127.0.0.1
+2026-08-09 09:38:53 INFO  [main] c.office.notification.server.Server - Total Clients: 0
+2026-08-09 09:38:53 INFO  [Thread-2] c.o.n.server.ClientHandler - Client registered: ASUS
+2026-08-09 09:38:53 INFO  [main] c.office.notification.client.Client - Server registration response: Registration Successful
+2026-08-09 09:38:53 INFO  [main] c.office.notification.client.Client - Heartbeat sender started
+2026-08-09 09:39:03 WARN  [Thread-3] c.office.notification.client.Client - TEST: Heartbeat sender stopped
+2026-08-09 09:40:09 WARN  [Thread-0] c.o.n.server.HeartbeatMonitor - Client heartbeat timeout: ASUS
+2026-08-09 09:40:09 INFO  [Thread-0] c.o.n.server.ClientHandler - Inactive client disconnected: ASUS
+2026-08-09 09:40:09 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-09 09:40:09 INFO  [Thread-2] c.o.n.server.ClientHandler - Client disconnected: ASUS
+2026-08-09 09:40:09 INFO  [Thread-2] c.o.n.server.ClientHandler - Remaining clients: 0
+2026-08-09 09:40:14 INFO  [main] c.office.notification.client.Client - Connected to server
+2026-08-09 09:40:14 INFO  [main] c.office.notification.server.Server - New client connection accepted from /127.0.0.1
+2026-08-09 09:40:14 INFO  [main] c.office.notification.server.Server - Total Clients: 0
+2026-08-09 09:40:14 INFO  [Thread-3] c.o.n.server.ClientHandler - Client registered: ASUS
+2026-08-09 09:40:14 INFO  [main] c.office.notification.client.Client - Server registration response: Registration Successful
+2026-08-09 09:40:14 INFO  [main] c.office.notification.client.Client - Heartbeat sender started
+2026-08-09 09:40:24 WARN  [Thread-5] c.office.notification.client.Client - TEST: Heartbeat sender stopped
+2026-08-09 09:41:29 WARN  [Thread-0] c.o.n.server.HeartbeatMonitor - Client heartbeat timeout: ASUS
+2026-08-09 09:41:29 INFO  [Thread-0] c.o.n.server.ClientHandler - Inactive client disconnected: ASUS
+2026-08-09 09:41:29 INFO  [Thread-3] c.o.n.server.ClientHandler - Client disconnected: ASUS
+2026-08-09 09:41:29 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-09 09:41:29 INFO  [Thread-3] c.o.n.server.ClientHandler - Remaining clients: 0
+2026-08-09 09:41:34 INFO  [main] c.office.notification.client.Client - Connected to server
+2026-08-09 09:41:34 INFO  [main] c.office.notification.server.Server - New client connection accepted from /127.0.0.1
+2026-08-09 09:41:34 INFO  [main] c.office.notification.server.Server - Total Clients: 0
+2026-08-09 09:41:34 INFO  [Thread-4] c.o.n.server.ClientHandler - Client registered: ASUS
+2026-08-09 09:41:34 INFO  [main] c.office.notification.client.Client - Server registration response: Registration Successful
+2026-08-09 09:41:34 INFO  [main] c.office.notification.client.Client - Heartbeat sender started
+2026-08-09 09:41:44 WARN  [Thread-7] c.office.notification.client.Client - TEST: Heartbeat sender stopped
+2026-08-09 09:42:49 WARN  [Thread-0] c.o.n.server.HeartbeatMonitor - Client heartbeat timeout: ASUS
+2026-08-09 09:42:49 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-09 09:42:49 INFO  [Thread-4] c.o.n.server.ClientHandler - Client disconnected: ASUS
+2026-08-09 09:42:49 INFO  [Thread-0] c.o.n.server.ClientHandler - Inactive client disconnected: ASUS
+2026-08-09 09:42:49 INFO  [Thread-4] c.o.n.server.ClientHandler - Remaining clients: 0
+2026-08-09 09:42:54 INFO  [main] c.office.notification.client.Client - Connected to server
+2026-08-09 09:42:54 INFO  [main] c.office.notification.server.Server - New client connection accepted from /127.0.0.1
+2026-08-09 09:42:54 INFO  [main] c.office.notification.server.Server - Total Clients: 0
+2026-08-09 09:42:54 INFO  [Thread-5] c.o.n.server.ClientHandler - Client registered: ASUS
+2026-08-09 09:42:54 INFO  [main] c.office.notification.client.Client - Server registration response: Registration Successful
+2026-08-09 09:42:54 INFO  [main] c.office.notification.client.Client - Heartbeat sender started
+2026-08-09 09:43:04 WARN  [Thread-9] c.office.notification.client.Client - TEST: Heartbeat sender stopped
+2026-08-09 09:48:26 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-09 09:48:31 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-09 09:48:36 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-09 09:48:40 INFO  [main] c.office.notification.server.Server - Server Started...
+2026-08-09 09:48:41 INFO  [Thread-0] c.o.n.server.HeartbeatMonitor - Heartbeat monitor started
+2026-08-09 09:48:41 INFO  [main] c.office.notification.client.Client - Connected to server
+2026-08-09 09:48:41 INFO  [main] c.office.notification.server.Server - New client connection accepted from /127.0.0.1
+2026-08-09 09:48:41 INFO  [main] c.office.notification.server.Server - Total Clients: 0
+2026-08-09 09:48:41 INFO  [Thread-1] c.o.n.server.ClientHandler - Client registered: ASUS
+2026-08-09 09:48:41 INFO  [main] c.office.notification.client.Client - Server registration response: Registration Successful
+2026-08-09 09:48:41 INFO  [main] c.office.notification.client.Client - Heartbeat sender started
+2026-08-09 09:49:06 INFO  [AWT-EventQueue-0] c.o.n.service.NotificationService - Notification sent to all clients. Priority: Information
+2026-08-09 09:49:10 INFO  [main] c.office.notification.client.Client - Notification received with priority: Information
+2026-08-09 10:05:31 INFO  [main] c.office.notification.server.Server - Server Started...
+2026-08-09 10:05:31 INFO  [Thread-0] c.o.n.server.HeartbeatMonitor - Heartbeat monitor started
+2026-08-09 10:05:37 INFO  [main] c.office.notification.client.Client - Connected to server
+2026-08-09 10:05:37 INFO  [main] c.office.notification.server.Server - New client connection accepted from /127.0.0.1
+2026-08-09 10:05:37 INFO  [main] c.office.notification.server.Server - Total Clients: 0
+2026-08-09 10:05:37 INFO  [Thread-1] c.o.n.server.ClientHandler - Client registered: ASUS
+2026-08-09 10:05:37 INFO  [main] c.office.notification.client.Client - Server registration response: Registration Successful
+2026-08-09 10:05:37 INFO  [main] c.office.notification.client.Client - Heartbeat sender started
+2026-08-09 10:05:43 INFO  [AWT-EventQueue-0] c.o.n.service.NotificationService - Notification sent to all clients. Priority: Information
+2026-08-09 10:05:50 INFO  [main] c.office.notification.client.Client - Notification received with priority: Information
+2026-08-09 10:05:55 INFO  [Thread-1] c.o.n.server.ClientHandler - Client disconnected: ASUS
+2026-08-09 10:05:55 INFO  [Thread-1] c.o.n.server.ClientHandler - Remaining clients: 0
+2026-08-09 11:39:14 INFO  [main] c.office.notification.server.Server - Server Started...
+2026-08-09 11:39:14 INFO  [Thread-0] c.o.n.server.HeartbeatMonitor - Heartbeat monitor started
+2026-08-09 11:39:19 INFO  [main] c.office.notification.client.Client - Connected to server
+2026-08-09 11:39:19 INFO  [main] c.office.notification.server.Server - New client connection accepted from /127.0.0.1
+2026-08-09 11:39:19 INFO  [main] c.office.notification.server.Server - Total Clients: 0
+2026-08-09 11:39:19 INFO  [Thread-1] c.o.n.server.ClientHandler - Client registered: ASUS
+2026-08-09 11:39:19 INFO  [main] c.office.notification.client.Client - Server registration response: Registration Successful
+2026-08-09 11:39:19 INFO  [main] c.office.notification.client.Client - Heartbeat sender started
+2026-08-09 11:39:32 INFO  [AWT-EventQueue-0] c.o.n.service.NotificationService - Notification sent to all clients. Priority: Information
+2026-08-09 11:47:15 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-09 11:47:20 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-09 11:47:20 INFO  [main] c.office.notification.server.Server - Server Started...
+2026-08-09 11:47:20 INFO  [Thread-0] c.o.n.server.HeartbeatMonitor - Heartbeat monitor started
+2026-08-09 11:47:25 INFO  [main] c.office.notification.client.Client - Connected to server
+2026-08-09 11:47:25 INFO  [main] c.office.notification.server.Server - New client connection accepted from /127.0.0.1
+2026-08-09 11:47:25 INFO  [main] c.office.notification.server.Server - Total Clients: 0
+2026-08-09 11:47:25 INFO  [Thread-1] c.o.n.server.ClientHandler - Client registered: ASUS
+2026-08-09 11:47:25 INFO  [main] c.office.notification.client.Client - Server registration response: Registration Successful
+2026-08-09 11:47:25 INFO  [main] c.office.notification.client.Client - Heartbeat sender started
+2026-08-09 11:47:26 INFO  [AWT-EventQueue-0] c.o.n.service.NotificationService - Notification sent to all clients. Priority: Information
+2026-08-09 11:48:04 INFO  [main] c.office.notification.client.Client - Notification received with priority: Information
+2026-08-09 11:48:07 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-09 11:48:12 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-09 11:48:17 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-09 11:48:22 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-09 11:48:27 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-09 11:48:32 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-09 11:48:37 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-09 11:48:42 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-09 11:48:47 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-09 11:48:52 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-09 11:48:57 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-09 11:49:02 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-09 11:49:07 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-09 11:49:12 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-09 11:49:17 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-09 11:49:22 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-09 11:49:27 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-09 11:49:32 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-09 11:49:37 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-09 11:49:42 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-09 11:49:47 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-09 11:49:52 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-09 11:49:57 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-09 11:50:02 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-09 11:50:07 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-09 11:50:12 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-09 11:50:17 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-09 11:50:22 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-09 11:50:27 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-09 11:50:32 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-09 11:50:37 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-09 11:50:42 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-09 11:50:47 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-09 11:50:52 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-09 11:50:57 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-09 11:51:02 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-09 11:51:07 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-09 11:51:12 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-09 11:51:13 INFO  [main] c.office.notification.server.Server - Server Started...
+2026-08-09 11:51:13 INFO  [Thread-0] c.o.n.server.HeartbeatMonitor - Heartbeat monitor started
+2026-08-09 11:51:17 INFO  [main] c.office.notification.client.Client - Connected to server
+2026-08-09 11:51:17 INFO  [main] c.office.notification.server.Server - New client connection accepted from /127.0.0.1
+2026-08-09 11:51:17 INFO  [main] c.office.notification.server.Server - Total Clients: 0
+2026-08-09 11:51:17 INFO  [Thread-1] c.o.n.server.ClientHandler - Client registered: ASUS
+2026-08-09 11:51:17 INFO  [main] c.office.notification.client.Client - Server registration response: Registration Successful
+2026-08-09 11:51:17 INFO  [main] c.office.notification.client.Client - Heartbeat sender started
