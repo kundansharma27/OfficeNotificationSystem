@@ -7,11 +7,15 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.time.LocalDateTime;
 import com.office.notification.model.NotificationHistory;
+import com.office.notification.util.LoggerUtil;
+import org.slf4j.Logger;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class NotificationRepository {
+    private static final Logger logger =
+            LoggerUtil.getLogger(NotificationRepository.class);
     public void saveNotification(Message message, String recipient) {
         String sql = """
                 INSERT INTO notification_history
@@ -29,11 +33,11 @@ public class NotificationRepository {
 
             statement.executeUpdate();
 
-            System.out.println("Notification saved to database.");
+            logger.info("Notification saved to database.");
 
         } catch (Exception e) {
 
-            e.printStackTrace();
+            logger.error("Failed to save notification to database", e);
         }
     }
     public List<NotificationHistory> findAllNotifications() {
@@ -67,7 +71,7 @@ public class NotificationRepository {
 
         } catch (Exception e) {
 
-            e.printStackTrace();
+            logger.error("Failed to load notification history", e);
         }
 
         return historyList;
@@ -89,7 +93,7 @@ public class NotificationRepository {
             }
 
         } catch (Exception e) {
-            e.printStackTrace();
+            logger.error("Database operation failed", e);
         }
 
         return 0;

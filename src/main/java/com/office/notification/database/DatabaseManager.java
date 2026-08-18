@@ -1,10 +1,15 @@
 package com.office.notification.database;
 
+import com.office.notification.util.LoggerUtil;
+import org.slf4j.Logger;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class DatabaseManager {
+    private static final Logger logger =
+            LoggerUtil.getLogger(DatabaseManager.class);
     public static final String URL = "jdbc:sqlite:notification.db";
 
     public static Connection getConnection()
@@ -30,23 +35,10 @@ public class DatabaseManager {
 
             statement.executeUpdate(sql);
 
-            System.out.println("Notification history table created successfully!"   );
+            logger.info("Notification history table is ready");
 
         } catch (SQLException e) {
-            e.printStackTrace();
+            logger.error("Database operation failed", e);
         }
-    }
-    public static void main(String[] args) {
-
-        try (Connection connection = getConnection()) {
-
-            System.out.println("Database connected successfully!");
-
-        } catch (SQLException e) {
-
-            e.printStackTrace();
-        }
-
-        createTables();
     }
 }

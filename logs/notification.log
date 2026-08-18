@@ -184,3 +184,27 @@ java.lang.NumberFormatException: Cannot parse null string
 2026-08-18 21:49:23 INFO  [Thread-0] c.office.notification.server.Server - Server socket closed.
 2026-08-18 21:49:23 INFO  [main] c.office.notification.server.Server - Server stopped gracefully.
 2026-08-18 21:49:23 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-18 22:03:16 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-18 22:03:21 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-18 22:03:23 INFO  [main] c.office.notification.server.Server - Server started on port 5000
+2026-08-18 22:03:23 INFO  [Thread-1] c.o.n.server.HeartbeatMonitor - Heartbeat monitor started
+2026-08-18 22:03:26 INFO  [main] c.office.notification.client.Client - Connecting to server localhost:5000
+2026-08-18 22:03:26 INFO  [main] c.office.notification.server.Server - New client connection accepted from /127.0.0.1
+2026-08-18 22:03:26 INFO  [main] c.office.notification.server.Server - Total Clients: 0
+2026-08-18 22:03:26 INFO  [Thread-2] c.o.n.server.ClientHandler - Client registered: ASUS
+2026-08-18 22:03:26 INFO  [main] c.office.notification.client.Client - Server registration response: Registration Successful
+2026-08-18 22:03:26 INFO  [main] c.office.notification.client.Client - Heartbeat sender started
+2026-08-18 22:03:33 INFO  [Thread-0] c.office.notification.server.Server - Server shutting down...
+2026-08-18 22:03:33 INFO  [Thread-0] c.office.notification.server.Server - Server socket closed.
+2026-08-18 22:03:33 INFO  [main] c.office.notification.server.Server - Server stopped gracefully.
+2026-08-18 22:45:25 INFO  [main] c.office.notification.server.Server - Server started on port 5000
+2026-08-18 22:45:26 INFO  [Thread-1] c.o.n.server.HeartbeatMonitor - Heartbeat monitor started
+2026-08-18 22:45:33 INFO  [main] c.office.notification.client.Client - Connecting to server localhost:5000
+2026-08-18 22:45:33 INFO  [main] c.office.notification.server.Server - New client connection accepted from /127.0.0.1
+2026-08-18 22:45:33 INFO  [main] c.office.notification.server.Server - Total Clients: 0
+2026-08-18 22:45:33 INFO  [Thread-2] c.o.n.server.ClientHandler - Client registered: ASUS
+2026-08-18 22:45:33 INFO  [main] c.office.notification.client.Client - Server registration response: Registration Successful
+2026-08-18 22:45:33 INFO  [main] c.office.notification.client.Client - Heartbeat sender started
+2026-08-18 22:45:39 INFO  [Thread-0] c.office.notification.server.Server - Server shutting down...
+2026-08-18 22:45:39 INFO  [Thread-0] c.office.notification.server.Server - Server socket closed.
+2026-08-18 22:45:39 INFO  [main] c.office.notification.server.Server - Server stopped gracefully.
