@@ -4,14 +4,18 @@ import com.office.notification.service.NotificationService;
 import com.office.notification.gui.AdminDashboard;
 import java.net.ServerSocket;
 import java.net.Socket;
+
+import com.office.notification.util.AppConfig;
 import org.slf4j.Logger;
 import com.office.notification.util.LoggerUtil;
 import java.io.IOException;
+
 
 public class Server {
 
     private static final ClientManager clientManager = new ClientManager();
     private static final NotificationService notificationService = new NotificationService(clientManager);
+    private static AdminDashboard dashboard;
 
     private static final Logger logger =
             LoggerUtil.getLogger(Server.class);
@@ -19,7 +23,8 @@ public class Server {
     public static void main(String[] args) {
         FlatLightLaf.setup();
         try {
-            ServerSocket serverSocket = new ServerSocket(5000);
+            int port = AppConfig.getInt("server.port");
+            ServerSocket serverSocket = new ServerSocket(port);
 
             Runtime.getRuntime().addShutdownHook(new Thread(() -> {
 
@@ -34,9 +39,11 @@ public class Server {
                 }
             }));
 
-            logger.info("Server Started...");
+            logger.info("Server started on port {}", port);
 
-          AdminDashboard dashboard =  new AdminDashboard(notificationService, clientManager);
+            dashboard = new AdminDashboard(notificationService, clientManager);
+
+            dashboard.onServerStatusChanged(true);
           clientManager.setClientListListener(dashboard);
 
             HeartbeatMonitor heartbeatMonitor = new HeartbeatMonitor(clientManager);
@@ -61,6 +68,9 @@ public class Server {
         }  catch (java.net.SocketException e) {
 
         if (e.getMessage().equals("Socket closed")) {
+            if (dashboard != null) {
+                dashboard.onServerStatusChanged(false);
+            }
             logger.info("Server stopped gracefully.");
         } else {
             logger.error("Server socket error occurred", e);

@@ -2,8 +2,7 @@ package com.office.notification.client;
 
 import com.office.notification.protocol.Packet;
 import com.office.notification.protocol.PacketType;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import com.office.notification.util.AppConfig;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -24,7 +23,7 @@ public class HeartbeatSender implements Runnable {
         while (true) {
 
             try {
-                Thread.sleep(3000);
+                Thread.sleep(AppConfig.getInt("heartbeat.interval"));
 
                 Packet heartbeatPacket = new Packet(PacketType.HEARTBEAT, null);
                 outputStream.writeObject(heartbeatPacket);

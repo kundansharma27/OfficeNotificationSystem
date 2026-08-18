@@ -1,6 +1,7 @@
 package com.office.notification.gui;
 
 import com.office.notification.listener.ClientListListener;
+import com.office.notification.listener.ServerStatusListener;
 import com.office.notification.model.Message;
 import com.office.notification.repository.NotificationRepository;
 import com.office.notification.server.ClientHandler;
@@ -9,7 +10,7 @@ import com.office.notification.service.NotificationService;
 import javax.swing.*;
 import java.awt.*;
 
-public class AdminDashboard extends JFrame implements ClientListListener {
+public class AdminDashboard extends JFrame implements ClientListListener, ServerStatusListener {
 
     private final NotificationService notificationService;
     private final ClientManager clientManager;
@@ -25,6 +26,7 @@ public class AdminDashboard extends JFrame implements ClientListListener {
     private JLabel clientCountValue;
     private JLabel onlineCountValue;
     private JLabel sentTodayValue;
+    private JLabel statusLabel;
 
     private final NotificationRepository notificationRepository;
 
@@ -120,9 +122,7 @@ public class AdminDashboard extends JFrame implements ClientListListener {
 
     private void setupLayout() {
 
-        setLayout(
-                new BorderLayout(15, 15)
-        );
+        setLayout(new BorderLayout(15, 15));
 
         // =========================
         // HEADER
@@ -152,10 +152,16 @@ public class AdminDashboard extends JFrame implements ClientListListener {
                 )
         );
 
-        JLabel statusLabel =
-                new JLabel(
-                        "● Server Online"
-                );
+        statusLabel =
+                new JLabel("● Server Online");
+
+        statusLabel.setFont(
+                new Font(
+                        "SansSerif",
+                        Font.BOLD,
+                        14
+                )
+        );
 
         statusLabel.setFont(
                 new Font(
@@ -624,5 +630,24 @@ public class AdminDashboard extends JFrame implements ClientListListener {
         }
 
         updateClientStats();
+    }
+    private void updateServerStatus(boolean online) {
+
+        if (online) {
+
+            statusLabel.setText("● Server Online");
+
+        } else {
+
+            statusLabel.setText("● Server Offline");
+        }
+    }
+
+    @Override
+    public void onServerStatusChanged(boolean online) {
+        SwingUtilities.invokeLater(
+                () -> updateServerStatus(online)
+        );
+
     }
 }

@@ -4,7 +4,9 @@ import com.office.notification.model.Message;
 import com.office.notification.model.ClientRegistration;
 import com.office.notification.protocol.Packet;
 import com.office.notification.protocol.PacketType;
+import com.office.notification.util.AppConfig;
 import com.office.notification.util.LoggerUtil;
+import com.office.notification.util.AppConfig;
 import org.slf4j.Logger;
 
 import javax.swing.*;
@@ -39,7 +41,7 @@ public class Client {
 
                 try {
 
-                    Thread.sleep(5000);
+                    Thread.sleep(AppConfig.getInt("reconnect.delay"));
 
                 } catch (InterruptedException ex) {
 
@@ -56,10 +58,11 @@ public class Client {
     private static void connectToServer() throws Exception {
 
         try {
+            String host = AppConfig.get("server.host");
+            int port = AppConfig.getInt("server.port");
+            socket = new Socket(host,port);
 
-            socket = new Socket("localhost", 5000);
-
-            logger.info("Connected to server");
+            logger.info("Connecting to server {}:{}", host, port);
 
             outputStream =
                     new ObjectOutputStream(

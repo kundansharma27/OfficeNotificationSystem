@@ -1,112 +1,186 @@
-2026-08-17 21:09:00 INFO  [main] c.office.notification.server.Server - Server Started...
-2026-08-17 21:09:00 INFO  [Thread-1] c.o.n.server.HeartbeatMonitor - Heartbeat monitor started
-2026-08-17 21:09:04 INFO  [main] c.office.notification.client.Client - Connected to server
-2026-08-17 21:09:04 INFO  [main] c.office.notification.server.Server - New client connection accepted from /127.0.0.1
-2026-08-17 21:09:04 INFO  [main] c.office.notification.server.Server - Total Clients: 0
-2026-08-17 21:09:04 INFO  [Thread-2] c.o.n.server.ClientHandler - Client registered: ASUS
-2026-08-17 21:09:04 INFO  [main] c.office.notification.client.Client - Server registration response: Registration Successful
-2026-08-17 21:09:04 INFO  [main] c.office.notification.client.Client - Heartbeat sender started
-2026-08-17 21:09:13 INFO  [AWT-EventQueue-0] c.o.n.service.NotificationService - Notification sent to all clients. Priority: Information
-2026-08-17 21:09:18 INFO  [AWT-EventQueue-0] c.o.n.service.NotificationService - Notification sent to all clients. Priority: Information
-2026-08-17 21:09:53 INFO  [Thread-0] c.office.notification.server.Server - Server shutting down...
-2026-08-17 21:09:53 INFO  [Thread-0] c.office.notification.server.Server - Server socket closed.
-2026-08-17 21:09:53 INFO  [main] c.office.notification.server.Server - Server stopped gracefully.
-2026-08-17 21:09:55 WARN  [Thread-0] c.o.n.client.HeartbeatSender - Heartbeat sender stopped because connection was closed.
-2026-08-17 21:09:57 INFO  [main] c.office.notification.server.Server - Server Started...
-2026-08-17 21:09:58 INFO  [Thread-1] c.o.n.server.HeartbeatMonitor - Heartbeat monitor started
-2026-08-17 21:12:32 INFO  [Thread-0] c.office.notification.server.Server - Server shutting down...
-2026-08-17 21:12:32 INFO  [Thread-0] c.office.notification.server.Server - Server socket closed.
-2026-08-17 21:12:32 INFO  [main] c.office.notification.server.Server - Server stopped gracefully.
-2026-08-17 21:30:38 INFO  [main] c.office.notification.server.Server - Server Started...
-2026-08-17 21:30:38 ERROR [main] c.office.notification.server.Server - Server error occurred
-java.lang.NullPointerException: Cannot invoke "javax.swing.JButton.setText(String)" because "this.sendButton" is null
-	at com.office.notification.gui.AdminDashboard.updatePriorityStyle(AdminDashboard.java:602)
-	at com.office.notification.gui.AdminDashboard.initializeComponents(AdminDashboard.java:83)
-	at com.office.notification.gui.AdminDashboard.<init>(AdminDashboard.java:40)
-	at com.office.notification.server.Server.main(Server.java:39)
-2026-08-17 21:30:39 INFO  [Thread-0] c.office.notification.server.Server - Server shutting down...
-2026-08-17 21:30:39 INFO  [Thread-0] c.office.notification.server.Server - Server socket closed.
-2026-08-17 21:30:40 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
-2026-08-17 21:30:45 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
-2026-08-17 21:30:50 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
-2026-08-17 21:30:51 INFO  [main] c.office.notification.server.Server - Server Started...
-2026-08-17 21:30:51 ERROR [main] c.office.notification.server.Server - Server error occurred
-java.lang.NullPointerException: Cannot invoke "javax.swing.JButton.setText(String)" because "this.sendButton" is null
-	at com.office.notification.gui.AdminDashboard.updatePriorityStyle(AdminDashboard.java:602)
-	at com.office.notification.gui.AdminDashboard.initializeComponents(AdminDashboard.java:83)
-	at com.office.notification.gui.AdminDashboard.<init>(AdminDashboard.java:40)
-	at com.office.notification.server.Server.main(Server.java:39)
-2026-08-17 21:30:52 INFO  [Thread-0] c.office.notification.server.Server - Server shutting down...
-2026-08-17 21:30:52 INFO  [Thread-0] c.office.notification.server.Server - Server socket closed.
-2026-08-17 21:30:55 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
-2026-08-17 21:31:00 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
-2026-08-17 21:31:05 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
-2026-08-17 21:31:06 INFO  [main] c.office.notification.server.Server - Server Started...
-2026-08-17 21:31:06 ERROR [main] c.office.notification.server.Server - Server error occurred
-java.lang.NullPointerException: Cannot invoke "javax.swing.JButton.setText(String)" because "this.sendButton" is null
-	at com.office.notification.gui.AdminDashboard.updatePriorityStyle(AdminDashboard.java:602)
-	at com.office.notification.gui.AdminDashboard.initializeComponents(AdminDashboard.java:83)
-	at com.office.notification.gui.AdminDashboard.<init>(AdminDashboard.java:40)
-	at com.office.notification.server.Server.main(Server.java:39)
-2026-08-17 21:31:07 INFO  [Thread-0] c.office.notification.server.Server - Server shutting down...
-2026-08-17 21:31:07 INFO  [Thread-0] c.office.notification.server.Server - Server socket closed.
-2026-08-17 21:31:10 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
-2026-08-17 21:31:15 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
-2026-08-17 21:31:20 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
-2026-08-17 21:31:21 INFO  [main] c.office.notification.server.Server - Server Started...
-2026-08-17 21:31:21 ERROR [main] c.office.notification.server.Server - Server error occurred
-java.lang.NullPointerException: Cannot invoke "javax.swing.JButton.setText(String)" because "this.sendButton" is null
-	at com.office.notification.gui.AdminDashboard.updatePriorityStyle(AdminDashboard.java:602)
-	at com.office.notification.gui.AdminDashboard.initializeComponents(AdminDashboard.java:83)
-	at com.office.notification.gui.AdminDashboard.<init>(AdminDashboard.java:40)
-	at com.office.notification.server.Server.main(Server.java:39)
-2026-08-17 21:31:22 INFO  [Thread-0] c.office.notification.server.Server - Server shutting down...
-2026-08-17 21:31:22 INFO  [Thread-0] c.office.notification.server.Server - Server socket closed.
-2026-08-17 21:31:25 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
-2026-08-17 21:31:30 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
-2026-08-17 21:31:35 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
-2026-08-17 21:31:40 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
-2026-08-17 21:31:45 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
-2026-08-17 21:31:50 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
-2026-08-17 21:31:55 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
-2026-08-17 21:32:00 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
-2026-08-17 21:32:05 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
-2026-08-17 21:32:10 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
-2026-08-17 21:32:15 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
-2026-08-17 21:32:20 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
-2026-08-17 21:32:25 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
-2026-08-17 21:32:30 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
-2026-08-17 21:32:35 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
-2026-08-17 21:32:40 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
-2026-08-17 21:32:45 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
-2026-08-17 21:32:50 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
-2026-08-17 21:32:55 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
-2026-08-17 21:33:00 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
-2026-08-17 21:33:05 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
-2026-08-17 21:33:10 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
-2026-08-17 21:33:15 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
-2026-08-17 21:33:20 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
-2026-08-17 21:33:25 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
-2026-08-17 21:33:30 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
-2026-08-17 21:33:35 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
-2026-08-17 21:33:40 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
-2026-08-17 21:33:45 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
-2026-08-17 21:37:11 INFO  [main] c.office.notification.server.Server - Server Started...
-2026-08-17 21:37:11 INFO  [Thread-1] c.o.n.server.HeartbeatMonitor - Heartbeat monitor started
-2026-08-17 21:37:21 INFO  [main] c.office.notification.client.Client - Connected to server
-2026-08-17 21:37:21 INFO  [main] c.office.notification.server.Server - New client connection accepted from /127.0.0.1
-2026-08-17 21:37:21 INFO  [main] c.office.notification.server.Server - Total Clients: 0
-2026-08-17 21:37:21 INFO  [Thread-2] c.o.n.server.ClientHandler - Client registered: ASUS
-2026-08-17 21:37:21 INFO  [main] c.office.notification.client.Client - Server registration response: Registration Successful
-2026-08-17 21:37:21 INFO  [main] c.office.notification.client.Client - Heartbeat sender started
-2026-08-17 21:37:28 INFO  [AWT-EventQueue-0] c.o.n.service.NotificationService - Notification sent to all clients. Priority: Information
-2026-08-17 21:37:41 INFO  [AWT-EventQueue-0] c.o.n.service.NotificationService - Notification sent to all clients. Priority: Information
-2026-08-17 21:38:02 INFO  [main] c.office.notification.client.Client - Notification received with priority: Information
-2026-08-17 21:38:02 INFO  [main] c.office.notification.client.Client - Notification received with priority: Information
-2026-08-17 21:39:29 INFO  [AWT-EventQueue-0] c.o.n.service.NotificationService - Notification sent to all clients. Priority: Critical
-2026-08-17 21:39:31 INFO  [main] c.office.notification.client.Client - Notification received with priority: Critical
-2026-08-17 21:39:46 INFO  [AWT-EventQueue-0] c.o.n.service.NotificationService - Notification sent to all clients. Priority: Warning
-2026-08-17 21:39:48 INFO  [main] c.office.notification.client.Client - Notification received with priority: Warning
-2026-08-17 21:40:27 INFO  [Thread-0] c.office.notification.server.Server - Server shutting down...
-2026-08-17 21:40:27 INFO  [Thread-0] c.office.notification.server.Server - Server socket closed.
-2026-08-17 21:40:27 INFO  [main] c.office.notification.server.Server - Server stopped gracefully.
+2026-08-18 07:25:15 INFO  [main] c.office.notification.server.Server - Server Started...
+2026-08-18 07:25:16 INFO  [Thread-1] c.o.n.server.HeartbeatMonitor - Heartbeat monitor started
+2026-08-18 07:25:21 INFO  [main] c.office.notification.client.Client - Connected to server
+2026-08-18 07:25:21 INFO  [main] c.office.notification.server.Server - New client connection accepted from /127.0.0.1
+2026-08-18 07:25:21 INFO  [main] c.office.notification.server.Server - Total Clients: 0
+2026-08-18 07:25:21 INFO  [Thread-2] c.o.n.server.ClientHandler - Client registered: ASUS
+2026-08-18 07:25:21 INFO  [main] c.office.notification.client.Client - Server registration response: Registration Successful
+2026-08-18 07:25:21 INFO  [main] c.office.notification.client.Client - Heartbeat sender started
+2026-08-18 07:25:40 INFO  [Thread-0] c.office.notification.server.Server - Server shutting down...
+2026-08-18 07:25:40 INFO  [Thread-0] c.office.notification.server.Server - Server socket closed.
+2026-08-18 07:25:40 INFO  [main] c.office.notification.server.Server - Server stopped gracefully.
+2026-08-18 07:25:41 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-18 07:25:46 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-18 07:25:51 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-18 07:25:56 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-18 07:26:01 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-18 07:26:06 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-18 07:26:11 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-18 07:26:16 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-18 07:26:21 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-18 07:26:26 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-18 07:26:31 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-18 07:26:36 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-18 07:26:41 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-18 07:38:13 INFO  [main] c.office.notification.server.Server - Server Started...
+2026-08-18 07:38:14 INFO  [Thread-1] c.o.n.server.HeartbeatMonitor - Heartbeat monitor started
+2026-08-18 07:38:17 INFO  [main] c.office.notification.client.Client - Connected to server
+2026-08-18 07:38:17 INFO  [main] c.office.notification.server.Server - New client connection accepted from /127.0.0.1
+2026-08-18 07:38:17 INFO  [main] c.office.notification.server.Server - Total Clients: 0
+2026-08-18 07:38:17 INFO  [Thread-2] c.o.n.server.ClientHandler - Client registered: ASUS
+2026-08-18 07:38:17 INFO  [main] c.office.notification.client.Client - Server registration response: Registration Successful
+2026-08-18 07:38:17 INFO  [main] c.office.notification.client.Client - Heartbeat sender started
+2026-08-18 07:38:27 INFO  [Thread-0] c.office.notification.server.Server - Server shutting down...
+2026-08-18 07:38:27 INFO  [main] c.office.notification.server.Server - Server stopped gracefully.
+2026-08-18 07:38:27 INFO  [Thread-0] c.office.notification.server.Server - Server socket closed.
+2026-08-18 07:38:28 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-18 07:38:33 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-18 20:43:13 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-18 20:43:18 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-18 20:43:23 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-18 20:43:25 INFO  [main] c.office.notification.server.Server - Server Started...
+2026-08-18 20:43:26 INFO  [Thread-1] c.o.n.server.HeartbeatMonitor - Heartbeat monitor started
+2026-08-18 20:43:28 INFO  [main] c.office.notification.client.Client - Connected to server
+2026-08-18 20:43:28 INFO  [main] c.office.notification.server.Server - New client connection accepted from /127.0.0.1
+2026-08-18 20:43:28 INFO  [main] c.office.notification.server.Server - Total Clients: 0
+2026-08-18 20:43:28 INFO  [Thread-2] c.o.n.server.ClientHandler - Client registered: ASUS
+2026-08-18 20:43:28 INFO  [main] c.office.notification.client.Client - Server registration response: Registration Successful
+2026-08-18 20:43:28 INFO  [main] c.office.notification.client.Client - Heartbeat sender started
+2026-08-18 20:43:50 INFO  [Thread-0] c.office.notification.server.Server - Server shutting down...
+2026-08-18 20:43:50 INFO  [Thread-0] c.office.notification.server.Server - Server socket closed.
+2026-08-18 20:43:50 INFO  [main] c.office.notification.server.Server - Server stopped gracefully.
+2026-08-18 20:43:50 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-18 21:11:36 ERROR [main] c.office.notification.server.Server - Server error occurred
+java.lang.NumberFormatException: Cannot parse null string
+	at java.base/java.lang.Integer.parseInt(Integer.java:527)
+	at java.base/java.lang.Integer.parseInt(Integer.java:662)
+	at com.office.notification.util.AppConfig.getInt(AppConfig.java:42)
+	at com.office.notification.server.Server.main(Server.java:26)
+2026-08-18 21:11:50 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-18 21:11:55 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-18 21:12:00 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-18 21:12:05 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-18 21:12:10 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-18 21:12:15 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-18 21:12:20 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-18 21:12:25 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-18 21:12:30 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-18 21:12:35 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-18 21:12:40 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-18 21:12:45 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-18 21:12:50 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-18 21:12:55 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-18 21:13:00 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-18 21:13:05 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-18 21:13:10 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-18 21:13:15 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-18 21:13:20 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-18 21:13:25 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-18 21:13:30 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-18 21:13:35 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-18 21:13:40 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-18 21:13:45 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-18 21:13:50 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-18 21:13:55 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-18 21:14:00 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-18 21:14:05 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-18 21:14:10 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-18 21:14:15 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-18 21:14:20 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-18 21:14:25 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-18 21:14:30 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-18 21:14:35 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-18 21:14:40 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-18 21:14:45 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-18 21:27:08 ERROR [main] c.office.notification.server.Server - Server error occurred
+java.lang.NumberFormatException: Cannot parse null string
+	at java.base/java.lang.Integer.parseInt(Integer.java:527)
+	at java.base/java.lang.Integer.parseInt(Integer.java:662)
+	at com.office.notification.util.AppConfig.getInt(AppConfig.java:47)
+	at com.office.notification.server.Server.main(Server.java:26)
+2026-08-18 21:27:17 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-18 21:27:22 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-18 21:27:27 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-18 21:27:32 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-18 21:27:37 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-18 21:27:42 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-18 21:27:47 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-18 21:29:39 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-18 21:29:44 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-18 21:29:49 INFO  [main] c.office.notification.server.Server - Server started on port 5000
+2026-08-18 21:29:49 INFO  [Thread-1] c.o.n.server.HeartbeatMonitor - Heartbeat monitor started
+2026-08-18 21:29:49 INFO  [main] c.office.notification.client.Client - Connected to server
+2026-08-18 21:29:49 INFO  [main] c.office.notification.server.Server - New client connection accepted from /127.0.0.1
+2026-08-18 21:29:49 INFO  [main] c.office.notification.server.Server - Total Clients: 0
+2026-08-18 21:29:49 INFO  [Thread-2] c.o.n.server.ClientHandler - Client registered: ASUS
+2026-08-18 21:29:49 INFO  [main] c.office.notification.client.Client - Server registration response: Registration Successful
+2026-08-18 21:29:49 INFO  [main] c.office.notification.client.Client - Heartbeat sender started
+2026-08-18 21:29:57 INFO  [Thread-0] c.office.notification.server.Server - Server shutting down...
+2026-08-18 21:29:57 INFO  [main] c.office.notification.server.Server - Server stopped gracefully.
+2026-08-18 21:29:57 INFO  [Thread-0] c.office.notification.server.Server - Server socket closed.
+2026-08-18 21:29:58 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-18 21:31:17 INFO  [main] c.office.notification.server.Server - Server started on port 5000
+2026-08-18 21:31:17 INFO  [Thread-1] c.o.n.server.HeartbeatMonitor - Heartbeat monitor started
+2026-08-18 21:31:27 INFO  [main] c.office.notification.client.Client - Connected to server
+2026-08-18 21:31:27 INFO  [main] c.office.notification.server.Server - New client connection accepted from /127.0.0.1
+2026-08-18 21:31:27 INFO  [main] c.office.notification.server.Server - Total Clients: 0
+2026-08-18 21:31:27 INFO  [Thread-2] c.o.n.server.ClientHandler - Client registered: ASUS
+2026-08-18 21:31:27 INFO  [main] c.office.notification.client.Client - Server registration response: Registration Successful
+2026-08-18 21:31:27 INFO  [main] c.office.notification.client.Client - Heartbeat sender started
+2026-08-18 21:31:35 INFO  [AWT-EventQueue-0] c.o.n.service.NotificationService - Notification sent to all clients. Priority: Information
+2026-08-18 21:31:40 INFO  [main] c.office.notification.client.Client - Notification received with priority: Information
+2026-08-18 21:32:04 INFO  [Thread-0] c.office.notification.server.Server - Server shutting down...
+2026-08-18 21:32:04 INFO  [Thread-0] c.office.notification.server.Server - Server socket closed.
+2026-08-18 21:32:04 INFO  [main] c.office.notification.server.Server - Server stopped gracefully.
+2026-08-18 21:32:05 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-18 21:36:32 INFO  [main] c.office.notification.server.Server - Server started on port 5000
+2026-08-18 21:36:32 INFO  [Thread-1] c.o.n.server.HeartbeatMonitor - Heartbeat monitor started
+2026-08-18 21:36:33 INFO  [main] c.office.notification.client.Client - Connecting to server localhost:5000
+2026-08-18 21:36:33 INFO  [main] c.office.notification.server.Server - New client connection accepted from /127.0.0.1
+2026-08-18 21:36:33 INFO  [main] c.office.notification.server.Server - Total Clients: 0
+2026-08-18 21:36:33 INFO  [Thread-2] c.o.n.server.ClientHandler - Client registered: ASUS
+2026-08-18 21:36:33 INFO  [main] c.office.notification.client.Client - Server registration response: Registration Successful
+2026-08-18 21:36:33 INFO  [main] c.office.notification.client.Client - Heartbeat sender started
+2026-08-18 21:37:38 INFO  [Thread-0] c.office.notification.server.Server - Server shutting down...
+2026-08-18 21:37:38 INFO  [Thread-0] c.office.notification.server.Server - Server socket closed.
+2026-08-18 21:37:38 INFO  [main] c.office.notification.server.Server - Server stopped gracefully.
+2026-08-18 21:40:46 INFO  [main] c.office.notification.server.Server - Server started on port 5000
+2026-08-18 21:40:47 INFO  [Thread-1] c.o.n.server.HeartbeatMonitor - Heartbeat monitor started
+2026-08-18 21:40:48 INFO  [main] c.office.notification.client.Client - Connecting to server localhost:5000
+2026-08-18 21:40:48 INFO  [main] c.office.notification.server.Server - New client connection accepted from /127.0.0.1
+2026-08-18 21:40:48 INFO  [main] c.office.notification.server.Server - Total Clients: 0
+2026-08-18 21:40:48 INFO  [Thread-2] c.o.n.server.ClientHandler - Client registered: ASUS
+2026-08-18 21:40:48 INFO  [main] c.office.notification.client.Client - Server registration response: Registration Successful
+2026-08-18 21:40:48 INFO  [main] c.office.notification.client.Client - Heartbeat sender started
+2026-08-18 21:41:19 INFO  [Thread-0] c.office.notification.server.Server - Server shutting down...
+2026-08-18 21:41:19 INFO  [Thread-0] c.office.notification.server.Server - Server socket closed.
+2026-08-18 21:41:19 INFO  [main] c.office.notification.server.Server - Server stopped gracefully.
+2026-08-18 21:41:19 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-18 21:41:24 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-18 21:41:29 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-18 21:41:34 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-18 21:41:39 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-18 21:41:44 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-18 21:41:49 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-18 21:41:54 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-18 21:41:59 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-18 21:42:04 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-18 21:42:09 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-18 21:42:14 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-18 21:42:19 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-18 21:42:24 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-18 21:42:29 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-18 21:42:34 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-18 21:42:39 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.
+2026-08-18 21:48:46 INFO  [main] c.office.notification.server.Server - Server started on port 5000
+2026-08-18 21:48:47 INFO  [Thread-1] c.o.n.server.HeartbeatMonitor - Heartbeat monitor started
+2026-08-18 21:48:56 INFO  [main] c.office.notification.client.Client - Connecting to server localhost:5000
+2026-08-18 21:48:56 INFO  [main] c.office.notification.server.Server - New client connection accepted from /127.0.0.1
+2026-08-18 21:48:56 INFO  [main] c.office.notification.server.Server - Total Clients: 0
+2026-08-18 21:48:56 INFO  [Thread-2] c.o.n.server.ClientHandler - Client registered: ASUS
+2026-08-18 21:48:56 INFO  [main] c.office.notification.client.Client - Server registration response: Registration Successful
+2026-08-18 21:48:56 INFO  [main] c.office.notification.client.Client - Heartbeat sender started
+2026-08-18 21:49:23 INFO  [Thread-0] c.office.notification.server.Server - Server shutting down...
+2026-08-18 21:49:23 INFO  [Thread-0] c.office.notification.server.Server - Server socket closed.
+2026-08-18 21:49:23 INFO  [main] c.office.notification.server.Server - Server stopped gracefully.
+2026-08-18 21:49:23 WARN  [main] c.office.notification.client.Client - Unable to connect to server. Retrying in 5 seconds.

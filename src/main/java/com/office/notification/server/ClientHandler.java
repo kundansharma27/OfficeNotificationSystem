@@ -3,6 +3,7 @@ package com.office.notification.server;
 import com.office.notification.model.ClientRegistration;
 import com.office.notification.protocol.Packet;
 import com.office.notification.protocol.PacketType;
+import com.office.notification.util.AppConfig;
 import com.office.notification.util.LoggerUtil;
 import org.slf4j.Logger;
 
@@ -144,11 +145,11 @@ public class ClientHandler extends Thread {
     }
 
     public boolean isAliveClient() {
+        long timeoutMillis = AppConfig.getInt("heartbeat.timeout");
 
         return lastHeartbeat != null
                 && lastHeartbeat.isAfter(
-                LocalDateTime.now().minusSeconds(60)
-        );
+                LocalDateTime.now().minusNanos(timeoutMillis * 1_000_000L));
     }
     public void disconnect() {
 
