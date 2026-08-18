@@ -1,11 +1,4 @@
 # Default ignored files
 /shelf/
 /workspace.xml
-# Maven
-target/
 
-# Application logs
-logs/
-
-# SQLite database
-*.db
