@@ -5,6 +5,7 @@ import com.office.notification.gui.AdminDashboard;
 import java.net.ServerSocket;
 import java.net.Socket;
 
+import com.office.notification.database.DatabaseManager;
 import com.office.notification.util.AppConfig;
 import org.slf4j.Logger;
 import com.office.notification.util.LoggerUtil;
@@ -25,6 +26,7 @@ public class Server {
         try {
             int port = AppConfig.getInt("server.port");
             ServerSocket serverSocket = new ServerSocket(port);
+            DatabaseManager.createTables();
 
             Runtime.getRuntime().addShutdownHook(new Thread(() -> {
 
