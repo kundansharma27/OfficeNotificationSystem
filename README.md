@@ -43,7 +43,7 @@ The system uses socket programming for client-server communication and supports 
 
 ### Notification History
 
-![Notification History](screenshots/history.png)
+![Notification History](screenshots/history.png)git pull --rebase origin maingit pull --rebase origin main
 
 ## Architecture
 
