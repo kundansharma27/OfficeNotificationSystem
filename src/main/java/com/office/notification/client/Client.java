@@ -6,7 +6,6 @@ import com.office.notification.protocol.Packet;
 import com.office.notification.protocol.PacketType;
 import com.office.notification.util.AppConfig;
 import com.office.notification.util.LoggerUtil;
-import com.office.notification.util.AppConfig;
 import org.slf4j.Logger;
 
 import javax.swing.*;
