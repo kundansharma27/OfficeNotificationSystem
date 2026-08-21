@@ -31,6 +31,20 @@ The system uses socket programming for client-server communication and supports 
 
 ---
 
+## Screenshots
+
+### Admin Dashboard
+
+![Admin Dashboard](screenshots/dashboard.png)
+
+### Notification Popup
+
+![Notification Popup](screenshots/notification-popup.png)
+
+### Notification History
+
+![Notification History](screenshots/history.png)
+
 ## Architecture
 
 ```text
