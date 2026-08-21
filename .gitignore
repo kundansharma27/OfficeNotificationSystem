@@ -36,3 +36,5 @@ logs/
 
 # SQLite database
 *.db
+.idea/
+*.iml
